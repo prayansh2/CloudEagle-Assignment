@@ -111,8 +111,8 @@ http://localhost:8080/swagger-ui/index.html
     {
       "name": "zuul",
       "collaborators": [
-        { "username": "alice", "roleName": "admin" },
-        { "username": "bob", "roleName": "write" }
+        { "login": "alice", "role_name": "admin" },
+        { "login": "bob", "role_name": "write" }
       ]
     }
   ]
