@@ -1,0 +1,4 @@
+github:
+  uri: https://api.github.com
+  REPOSITORY_URL : /orgs/{org}/repos?type=all&per_page={size}&page={page}
+  REPOSITORY_COLLABORATOR_URL : /repos/{org}/{repo}/collaborators?per_page={size}&page={page}
