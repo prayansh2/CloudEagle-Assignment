@@ -77,11 +77,16 @@ curl -H "X-GitHub-Token: ghp_yourtoken" \
   ```
   http://localhost:8080/api/generate-report?organizationName=netflix
   ```
+
+  ![Postman Request](screenshots/postman-request1.png)
+
 * Headers:
 
   ```
   X-GitHub-Token: ghp_yourtoken
   ```
+  ![Postman Request](screenshots/postman-request2.png)
+
 
 ---
 
