@@ -47,7 +47,7 @@ docker run -p 8080:8080 github-access-report
 ## 📡 API Endpoint
 
 ```
-GET http://localhost:8080/api/access-report?org={orgName}
+GET http://localhost:8080/api/generate-report?organizationName={orgName}
 ```
 
 ### 🔑 Required Header
@@ -64,7 +64,7 @@ X-GitHub-Token: ghp_yourtoken
 
 ```bash
 curl -H "X-GitHub-Token: ghp_yourtoken" \
-"http://localhost:8080/api/access-report?org=netflix"
+"http://localhost:8080/api/generate-report?organizationName=yourOrganization"
 ```
 
 ---
@@ -75,7 +75,7 @@ curl -H "X-GitHub-Token: ghp_yourtoken" \
 * URL:
 
   ```
-  http://localhost:8080/api/access-report?org=netflix
+  http://localhost:8080/api/generate-report?organizationName=netflix
   ```
 * Headers:
 
@@ -95,9 +95,12 @@ http://localhost:8080/swagger-ui/index.html
 
 👉 You can:
 
-* Enter `org` parameter
+* Enter `organizationName` parameter
 * Add Authorization header
 * Click **Execute**
+
+![Swagger UI](screenshots/swagger-ui.png)
+
 
 ---
 
@@ -236,6 +239,8 @@ If invalid → return error immediately (no unnecessary API calls)
 ## 🧪 Tests
 
 Run tests using:
+
+![Test Results](screenshots/test-results.png)
 
 ```bash
 mvn test
