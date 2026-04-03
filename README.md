@@ -53,7 +53,7 @@ GET /api/access-report?org={orgName}
 ### 🔑 Required Header
 
 ```
-Authorization: Bearer <your_github_token>
+X-GitHub-Token: ghp_yourtoken
 ```
 
 ---
@@ -63,7 +63,7 @@ Authorization: Bearer <your_github_token>
 ### Using cURL
 
 ```bash
-curl -H "Authorization: Bearer ghp_yourtoken" \
+curl -H "X-GitHub-Token: ghp_yourtoken" \
 "http://localhost:8080/api/access-report?org=netflix"
 ```
 
@@ -80,7 +80,7 @@ curl -H "Authorization: Bearer ghp_yourtoken" \
 * Headers:
 
   ```
-  Authorization: Bearer ghp_yourtoken
+  X-GitHub-Token: ghp_yourtoken
   ```
 
 ---
