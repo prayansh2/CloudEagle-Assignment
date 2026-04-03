@@ -7,24 +7,20 @@ A simple Spring Boot service that shows **which users have access to which repos
 ## 🚀 Quick Start (Run the Project)
 
 Make sure you have:
-
 * Java 17
-* Maven
-
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/github-access-report.git
-cd github-access-report
+git clone https://github.com/prayansh2/CloudEagle-Assignment.git
+cd CloudEagle-Assignment
 
 # Build the project
-mvn clean install
+./mvnw clean install
 
 # Run the application
-mvn spring-boot:run
+./mvnw spring-boot:run
 ```
 
 Server will start at:
-
 ```
 http://localhost:8080
 ```
@@ -38,7 +34,7 @@ http://localhost:8080
 docker build -t github-access-report .
 
 # Run container
-docker run -p 8080:8080 github-access-report
+ docker run -p 8080:8080 --name my-app-container github-access-report
 ```
 
 ---
@@ -47,7 +43,7 @@ docker run -p 8080:8080 github-access-report
 ## 📡 API Endpoint
 
 ```
-GET http://localhost:8080/api/access-report?org={orgName}
+GET http://localhost:8080/api/generate-report?organizationName={orgName}
 ```
 
 ### 🔑 Required Header
@@ -64,7 +60,7 @@ X-GitHub-Token: ghp_yourtoken
 
 ```bash
 curl -H "X-GitHub-Token: ghp_yourtoken" \
-"http://localhost:8080/api/access-report?org=netflix"
+"http://localhost:8080/api/generate-report?organizationName=yourOrganization"
 ```
 
 ---
@@ -75,13 +71,18 @@ curl -H "X-GitHub-Token: ghp_yourtoken" \
 * URL:
 
   ```
-  http://localhost:8080/api/access-report?org=netflix
+  http://localhost:8080/api/generate-report?organizationName=netflix
   ```
+
+  ![Postman Request](screenshots/postman-request1.png)
+
 * Headers:
 
   ```
   X-GitHub-Token: ghp_yourtoken
   ```
+  ![Postman Request](screenshots/postman-request2.png)
+
 
 ---
 
@@ -95,9 +96,12 @@ http://localhost:8080/swagger-ui/index.html
 
 👉 You can:
 
-* Enter `org` parameter
+* Enter `organizationName` parameter
 * Add Authorization header
 * Click **Execute**
+
+![Swagger UI](screenshots/swagger-ui.png)
+
 
 ---
 
@@ -236,6 +240,8 @@ If invalid → return error immediately (no unnecessary API calls)
 ## 🧪 Tests
 
 Run tests using:
+
+![Test Results](screenshots/test-results.png)
 
 ```bash
 mvn test
