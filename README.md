@@ -47,7 +47,7 @@ docker run -p 8080:8080 github-access-report
 ## 📡 API Endpoint
 
 ```
-GET /api/access-report?org={orgName}
+GET http://localhost:8080/api/access-report?org={orgName}
 ```
 
 ### 🔑 Required Header
