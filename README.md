@@ -7,24 +7,20 @@ A simple Spring Boot service that shows **which users have access to which repos
 ## 🚀 Quick Start (Run the Project)
 
 Make sure you have:
-
 * Java 17
-* Maven
-
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/github-access-report.git
-cd github-access-report
+git clone https://github.com/prayansh2/CloudEagle-Assignment.git
+cd CloudEagle-Assignment
 
 # Build the project
-mvn clean install
+./mvnw clean install
 
 # Run the application
-mvn spring-boot:run
+./mvnw spring-boot:run
 ```
 
 Server will start at:
-
 ```
 http://localhost:8080
 ```
