@@ -18,7 +18,7 @@ public class ReportService {
     }
 
     public List<Repository> generateReport(String org,String PAT) {
-        List<Repository> result = null;
+        List<Repository> result ;
         if(!Helper.isValidOrgName(org))
             throw new ValidationException("Organization name not valid");
         Helper.validateToken(PAT);

@@ -13,7 +13,6 @@ import java.util.List;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Repository {
 
-
     private String name;
 
     private List<Collaborator> collaborators;
