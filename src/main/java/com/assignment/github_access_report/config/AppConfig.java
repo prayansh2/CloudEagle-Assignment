@@ -16,8 +16,12 @@ import org.springframework.web.util.DefaultUriBuilderFactory;
 public class AppConfig {
 
     @Value("${github.uri}")
-    private String GITHUB_API_BASE_URL ;
+    private final String GITHUB_API_BASE_URL ;
 
+    AppConfig(@Value("${github.uri}") String GITHUB_API_BASE_URL)
+    {
+        this.GITHUB_API_BASE_URL=GITHUB_API_BASE_URL;
+    }
 
     @Bean
     public RestTemplate restTemplate() {

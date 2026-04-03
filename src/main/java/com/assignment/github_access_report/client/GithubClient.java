@@ -125,11 +125,6 @@ public List<Repository> fetchAllRepositories(String orgName ,HttpEntity<Void> en
             throw new GitHubApiException("Error in Github Api " + ex.getMessage(), status);
 
         }
-//        catch (HttpServerErrorException ex) {
-//
-//            throw new GitHubApiException("GitHub server error", ex.getStatusCode().value());
-//
-//        }
         catch (Exception ex) {
             throw new GitHubApiException("Unexpected error: " + ex.getMessage(), 500);
         }
@@ -208,11 +203,6 @@ public List<Collaborator> fetchCollaborators(
             throw new GitHubApiException("Client error: " + ex.getMessage(), status);
 
         }
-//        catch (HttpServerErrorException ex) {
-//
-//            throw new GitHubApiException("GitHub server error", ex.getStatusCode().value());
-//
-//        }
         catch (Exception ex) {
 
             throw new GitHubApiException("Unexpected error: " + ex.getMessage(), 500);
