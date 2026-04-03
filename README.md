@@ -34,7 +34,7 @@ http://localhost:8080
 docker build -t github-access-report .
 
 # Run container
-docker run -p 8080:8080 github-access-report
+ docker run -p 8080:8080 --name my-app-container github-access-report
 ```
 
 ---
